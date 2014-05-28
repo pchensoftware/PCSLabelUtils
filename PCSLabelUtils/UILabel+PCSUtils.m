@@ -10,7 +10,7 @@
 @implementation UILabel (PCSUtils)
 
 - (void)resizeToFitVerticallyWithMaxHeight:(int)maxHeight {
-   NSStringDrawingOptions options = self.numberOfLines > 1 ? NSStringDrawingUsesLineFragmentOrigin : 0;
+   NSStringDrawingOptions options = self.numberOfLines != 1 ? NSStringDrawingUsesLineFragmentOrigin : 0;
    NSDictionary *attributes = @{ NSFontAttributeName : self.font };
    CGRect textBoundingRect = [self.text boundingRectWithSize:CGSizeMake(self.frame.size.width, maxHeight) options:options attributes:attributes context:nil];
    
