@@ -19,4 +19,10 @@
    self.frame = frame;
 }
 
+- (void)resizeToFitHorizontallyWithMaxWidth:(int)maxWidth {
+   CGRect frame = self.frame;
+   frame.size.width = [self sizeThatFits:CGSizeMake(maxWidth, self.frame.size.height)].width;
+   self.frame = frame;
+}
+
 @end

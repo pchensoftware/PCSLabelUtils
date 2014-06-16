@@ -10,5 +10,6 @@
 @interface UILabel (PCSUtils)
 
 - (void)resizeToFitVerticallyWithMaxHeight:(int)maxHeight;
+- (void)resizeToFitHorizontallyWithMaxWidth:(int)maxWidth;
 
 @end
